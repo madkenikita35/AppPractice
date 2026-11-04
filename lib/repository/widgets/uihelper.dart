@@ -149,4 +149,24 @@ class Uihelper {
       ),
     );
   }
+
+  static customButton(VoidCallback callback) {
+    return Container(
+      height: 18.w,
+      width: 20.w,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(
+          color: Colors.green,
+        ),
+        borderRadius: BorderRadius.circular(4.r),
+      ),
+      child: Center(
+        child: Text(
+          "ADD",
+          style: TextStyle(fontSize: 8.sp, color: Color(0xff27af24)),
+        ),
+      ),
+    );
+  }
 }

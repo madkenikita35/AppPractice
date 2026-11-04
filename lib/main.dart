@@ -137,7 +137,8 @@ class MyApp extends StatelessWidget {
           title: 'BlinkIt',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            colorScheme: ColorScheme.fromSeed(
+                seedColor: Color.fromARGB(255, 224, 224, 10)),
             useMaterial3: false,
           ),
           // Stops very large system fonts from breaking layouts,
@@ -153,5 +154,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// The default counter app (MyHomePage) was removed: it was not used anywhere.

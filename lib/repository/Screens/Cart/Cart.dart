@@ -71,7 +71,9 @@
 //   }
 // }
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_blink/repository/widgets/uihelper.dart';
 
@@ -177,7 +179,76 @@ class _CartScreenState extends State<CartScreen> {
           ),
 
           // Rest of the cart: use ListView / SingleChildScrollView here
-          const Expanded(child: SizedBox()),
+          SizedBox(
+            height: 20.w,
+          ),
+          Uihelper.CustomImage(
+              img: "shoppingCart.png", width: 144.w, height: 144.h),
+          Uihelper.customFont(
+              text: "Rendering Will be Easy",
+              color: black,
+              fontWeight: FontWeight.bold,
+              fontSize: 16.sp,
+              fontFamily: "bold"),
+          Uihelper.customFont(
+            text: "Items you order will show up here so you can buy",
+            color: black,
+            fontWeight: FontWeight.bold,
+            fontSize: 12.sp,
+          ),
+          Uihelper.customFont(
+            text: "them easily",
+            color: black,
+            fontWeight: FontWeight.bold,
+            fontSize: 12.sp,
+          ),
+          SizedBox(
+            height: 30.w,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 20.w,
+              ),
+              Uihelper.customFont(
+                  text: "Best-Sellers",
+                  color: black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.sp,
+                  fontFamily: "bold"),
+            ],
+          ),
+          SizedBox(
+            height: 10.w,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 10.w,
+              ),
+              Stack(children: [
+                Uihelper.CustomImage(
+                    img: "Milk.webp", height: 120.w, width: 130.w),
+                Positioned(
+                  right: 20.w,
+                  bottom: 2.w,
+                  child: Uihelper.customButton(() {}),
+                ),
+              ]),
+              SizedBox(
+                width: 10.w,
+              ),
+              Stack(children: [
+                Uihelper.CustomImage(
+                    img: "Tomato.webp", height: 120.w, width: 130.w),
+                Positioned(
+                  right: 20.w,
+                  bottom: 2.w,
+                  child: Uihelper.customButton(() {}),
+                )
+              ]),
+            ],
+          )
         ],
       ),
     );
